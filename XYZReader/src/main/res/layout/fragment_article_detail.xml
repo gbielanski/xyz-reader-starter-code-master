@@ -10,30 +10,42 @@
         android:layout_height="wrap_content"
         app:layout_scrollFlags="scroll|enterAlways">
 
-        <FrameLayout
-            android:id="@+id/photo_container"
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/main.collapsing"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/photo_placeholder">
-            <!--suppress AndroidLintContentDescription -->
-            <ImageView
-                android:id="@+id/photo"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleMarginStart="48dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <FrameLayout
+                android:id="@+id/photo_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:scaleType="centerCrop" />
+                android:background="@color/photo_placeholder">
+                <!--suppress AndroidLintContentDescription -->
+                <ImageView
+                    android:id="@+id/photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="112dp"
-                android:background="@drawable/photo_background_protection" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="112dp"
+                    android:background="@drawable/photo_background_protection" />
 
-        </FrameLayout>
+            </FrameLayout>
+        </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v4.widget.NestedScrollView
         android:id="@+id/scrollview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <com.example.xyzreader.ui.MaxWidthLinearLayout
             android:layout_width="match_parent"
