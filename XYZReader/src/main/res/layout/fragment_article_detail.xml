@@ -8,7 +8,8 @@
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_scrollFlags="scroll|enterAlways">
+        app:layout_scrollFlags="scroll|enterAlways"
+        android:elevation="@dimen/app_bar_elevation">
 
         <android.support.design.widget.CollapsingToolbarLayout
             android:id="@+id/main.collapsing"
@@ -24,7 +25,8 @@
                 android:id="@+id/photo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:scaleType="centerCrop" />
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/article_picture" />
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/my_toolbar"
@@ -47,7 +49,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/detail_card_top_margin"
             android:background="@android:color/white"
-            android:elevation="2dp"
+            android:elevation="@dimen/card_elevation"
             android:maxWidth="@dimen/detail_card_max_width"
             android:orientation="vertical">
 
