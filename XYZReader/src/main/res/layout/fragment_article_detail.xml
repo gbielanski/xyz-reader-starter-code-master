@@ -49,7 +49,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/detail_card_top_margin"
             android:background="@android:color/white"
-            android:elevation="@dimen/card_elevation"
+            android:elevation="@dimen/tiny_elevation"
             android:maxWidth="@dimen/detail_card_max_width"
             android:orientation="vertical">
 
